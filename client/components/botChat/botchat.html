@@ -1,0 +1,25 @@
+<div class="container botChat">
+  <div class="row">
+    <div class="col-md-12 botChat__feed">
+      <ul>
+        <li ng-repeat="history in chatHistory track by $index">
+          <span ng-bind-html="history"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <form ng-submit="sendQuery()">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+          <input type="text" class="form-control" name="query" id="query" ng-model="query" required />
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <input class="form-control" type="submit" value="Go loco!"/>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
